@@ -10,7 +10,8 @@ Code used in our [ACL'19 paper](https://drive.google.com/open?id=166ngGwApN5XdOn
 
 ### Quick Start
 
-#### Phrasal Syntax (Section 3 in paper) 
+#### Phrasal Syntax (Section 3 in paper)
+* Navigate:
 ```
 cd chunking/
 ```
@@ -35,6 +36,7 @@ python cluster.py --feat_file chunking_rep.json
 ```
 
 #### Probing Tasks (Section 4)
+* Navigate:
 ```
 cd probing/
 ```
@@ -43,7 +45,7 @@ cd probing/
 ```
 python extract_features.py --data_file tree_depth.txt --output_file tree_depth_rep.json
 ```
-In the above command, append `--untrained_bert` to extract untrained BERT features.
+In the above command, append `--untrained_bert` flag to extract untrained BERT features.
 * Train the probing classifier for a given BERT layer (indexed from 0) and evaluate the performance (Table 2):
 ```
 python classifier.py --labels_file tree_depth.txt --feats_file tree_depth_rep.json --layer 0
@@ -51,6 +53,7 @@ python classifier.py --labels_file tree_depth.txt --feats_file tree_depth_rep.js
 We use the hyperparameter search space recommended by [SentEval](https://arxiv.org/abs/1803.05449).
 
 #### Subject-Verb Agreement (SVA) (Section 5)
+* Navigate:
 ```
 cd sva/
 ```
@@ -66,6 +69,7 @@ python classifier.py --input_folder ./ --layer 0
 We use the hyperparameter search space recommended by [SentEval](https://arxiv.org/abs/1803.05449).
 
 #### Compositional Structure (Section 6)
+* Navigate:
 ```
 cd tpdn/
 ```
@@ -78,6 +82,7 @@ python extract_features.py --input_folder . --output_folder .
 ```
 python approx.py --input_folder . --output_folder . --layer 0
 ```
+Check `--role_scheme` and `--rand_tree` flags for setting the role scheme.
 * Induce dependency parse tree from attention weights for a given attention head and BERT layer (both indexed from 1) (Figure 2):
 ```
 python induce_dep_trees.py --sentence text "The keys to the cabinet are on the table" --head_id 11 --layer_id 2 --sentence_root 6 
