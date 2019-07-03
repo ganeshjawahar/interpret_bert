@@ -1,6 +1,6 @@
 ## What does BERT learn about the structure of language?
 
-Code used in our [ACL'19 paper](https://drive.google.com/open?id=166ngGwApN5XdOnUzs_y12GqdDCoPvUeh) for interpreting [BERT model](https://arxiv.org/abs/1810.04805). Extensively cleaned with an objective to reproduce the experiments carried out in our study seamlessly.
+Code used in our [ACL'19 paper](https://drive.google.com/open?id=166ngGwApN5XdOnUzs_y12GqdDCoPvUeh) for interpreting [BERT model](https://arxiv.org/abs/1810.04805).
 
 ### Dependencies
 * [PyTorch](https://pytorch.org/)
